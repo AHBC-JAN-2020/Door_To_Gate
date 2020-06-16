@@ -4,11 +4,14 @@ using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Door_To_Gate.Models.AccountViewModels;
+using Door_To_Gate.Services;
 using DoorToGate.Controllers;
+using Google.Apis.Logging;
 using Identity.Dapper.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -22,7 +25,7 @@ namespace Door_To_Gate.Controllers
             private readonly SignInManager<DapperIdentityUser> _signInManager;
             private readonly IEmailSender _emailSender;
             private readonly ISmsSender _smsSender;
-            private readonly ILogger _logger;
+            private readonly Microsoft.Extensions.Logging.ILogger _logger;
 
             public AccountController(
                 UserManager<DapperIdentityUser> userManager,

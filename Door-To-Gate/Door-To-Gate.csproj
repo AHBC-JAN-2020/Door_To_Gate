@@ -23,7 +23,6 @@
   </ItemGroup>
     
       <ItemGroup>
-        <Folder Include="Models\AccountViewModels\" />
         <Folder Include="Models\ManageViewModels\" />
       </ItemGroup>
 </Project>
